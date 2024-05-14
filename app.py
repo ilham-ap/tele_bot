@@ -17,7 +17,7 @@ api_genai = os.getenv("gemini_api")
 api_tele = os.getenv("tele_api")
 TELEGRAM_API_TOKEN = f"{api_tele}"
 genai.configure(api_key=f'{api_genai}')
-
+keep_alive()
 # logging.basicConfig(
 #     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
 #     level=logging.INFO
