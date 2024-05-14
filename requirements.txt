@@ -3,3 +3,4 @@ pillow
 python-telegram-bot
 SpeechRecognition
 pydub
+flask
