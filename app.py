@@ -88,7 +88,7 @@ async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if text is not None and img is None:
       model = genai.GenerativeModel('gemini-pro')
       response = model.generate_content(text)
-      await context.bot.send_message(chat_id=update.effective_chat.id, text=response.text)
+      await context.bot.send_message(chat_id=update.effective_chat.id, text=response.text.replace('•', '  *'))
 
 if __name__ == '__main__':
     application = ApplicationBuilder().token(TELEGRAM_API_TOKEN).build()
