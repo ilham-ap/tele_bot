@@ -11,6 +11,8 @@ from pydub import AudioSegment
 from telegram import Update
 from telegram.ext import (ApplicationBuilder, CommandHandler, ContextTypes,
                           MessageHandler, filters)
+from keep_alive import keep_alive
+keep_allive()
 a=[]
 api_genai = os.getenv("gemini_api")
 api_tele = os.getenv("tele_api")
