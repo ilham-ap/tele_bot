@@ -12,7 +12,7 @@ from telegram import Update
 from telegram.ext import (ApplicationBuilder, CommandHandler, ContextTypes,
                           MessageHandler, filters)
 from keep_alive import keep_alive
-keep_allive()
+keep_alive()
 print(ok)
 a=[]
 api_genai = os.getenv("gemini_api")
