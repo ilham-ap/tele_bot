@@ -90,7 +90,7 @@ async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE):
       model = genai.GenerativeModel('gemini-pro')
       response = model.generate_content(text)
       #r_text = response.text.replace('•', '  *')
-      r_warp=textwrap.indent(response.text, '', predicate=lambda _: True)
+      r_warp=textwrap.indent(response.text, '> ', predicate=lambda _: True)
       await context.bot.send_message(chat_id=update.effective_chat.id, text=r_warp, parse_mode="MARKDOWN")
 
 if __name__ == '__main__':
