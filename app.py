@@ -90,7 +90,7 @@ async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if text is not None and img is None:
       model = genai.GenerativeModel('gemini-pro')
       response = model.generate_content(text)
-      r_text = response.text.replace('•', '  *')
+      r_text = response.text.replace('* ', '')
       r_warp=textwrap.indent(r_text, ' `', predicate=lambda _: True)
       r_m = markdown.markdown(r_warp)
       await context.bot.send_message(chat_id=update.effective_chat.id, text=r_text, parse_mode="MARKDOWN")
