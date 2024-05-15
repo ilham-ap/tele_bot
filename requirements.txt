@@ -4,3 +4,4 @@ python-telegram-bot
 SpeechRecognition
 pydub
 flask
+markdown
