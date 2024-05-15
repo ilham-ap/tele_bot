@@ -93,7 +93,7 @@ async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE):
       r_text = response.text.replace('* ', '• ')
       r_warp=textwrap.indent(r_text, ' `', predicate=lambda _: True)
       r_m = markdown.markdown(r_warp)
-      await context.bot.send_message(chat_id=update.effective_chat.id, text=r_text, parse_mode="MARKDOWN")
+      await context.bot.send_message(chat_id=update.effective_chat.id, text=response.text, parse_mode="MARKDOWN")
 
 if __name__ == '__main__':
     application = ApplicationBuilder().token(TELEGRAM_API_TOKEN).build()
